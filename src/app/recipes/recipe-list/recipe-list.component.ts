@@ -9,8 +9,8 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
   recipes: Recipe[] = [
-    new Recipe('Idly Sambar', 'a test desc', 'src/assets/Nungu-pine.jpeg'),
-    new Recipe('Mutton Chukka', 'a test desc', './src/assets/Nungu-pine.jpeg')
+    new Recipe('Idly Sambar', 'Steamed food', 'src/assets/Nungu-pine.jpeg'),
+    new Recipe('Mutton Chukka', 'Oil Fried food', './src/assets/Nungu-pine.jpeg')
   ];
    
   constructor() { }
@@ -19,10 +19,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   onRecipeSelected(recipe:Recipe){
-    this.recipeWasSelected.emit(recipe);  }
-
-    
-  @Output() featureSelcted = new EventEmitter<string>();
- 
+    this.recipeWasSelected.emit(recipe);  } 
 
 }
