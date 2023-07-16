@@ -8,37 +8,21 @@ export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
-        new Recipe('Idly Sambar',
-         'Steamed food',
-          'src/assets/cat.jpg', 
-          [
-            new Ingredient('Maavu', 1), 
-            new Ingredient('water', 3)
-            ], false),
+        new Recipe('Mini-idly', 'Steamed food', 'assets/small-idly.jpg', 
+                    [new Ingredient('Maavu', 1), new Ingredient('water', 3) ], ),
 
-        new Recipe('Mutton Chukka', 
-        'Oil Fried food', 
-        './src/assets/Nungu-pine.jpeg', 
-        [
-            new Ingredient('Meat',1),  
-            new Ingredient('Masala', 3)
-        ], false),
-        
-        new Recipe('Pathaneer', 
-        'Palm tree drink', 
-        './src/assets/Nungu-pine.jpeg', 
-        [
-            new Ingredient('PalmWater',1),  
-            new Ingredient('Calcium', 3)
-        ],
-        true)
+        new Recipe('Mixed rice', 'Mix of variety rice', 'assets/variety.jpg', 
+                    [new Ingredient('Rice',1), new Ingredient('MasalaGravies', 3) ], ),
+                    
+        new Recipe('Pathaneer', 'Palm tree drink', 'assets/kool.jpg', 
+                    [new Ingredient('PalmWater',1), new Ingredient('Calcium', 3)  ], )
       ];
 
     constructor(private slService: ShoppingListService){
     }
 
     getRecipes() {
-        return this.recipes.slice()
+        return this.recipes.slice();
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]){
