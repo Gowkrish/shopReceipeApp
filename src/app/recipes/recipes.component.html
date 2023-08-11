@@ -1,4 +1,4 @@
-<div style="outline: 1px solid blueviolet;">recipes component
+<div style="outline: 1px solid blueviolet;">Recipes Component
 <div class="row">
     <div class="col-md-5">
 
@@ -7,8 +7,8 @@
     </app-recipe-list>
 
     </div>
-    <div class="col-md-7">
-
+     <div class="col-md-7">
+<!--
         <app-recipe-detail
         *ngIf="selectedRecipe; else infoText"
         [recipe]="selectedRecipe"> 
@@ -16,8 +16,10 @@
 
     <ng-template #infoText>
         <p>Pls select a recipe</p>
-    </ng-template>
+    </ng-template> 
+commented inorder we got recipe-start component
     
-    </div>
+    </div> -->
+    <router-outlet></router-outlet>
 </div>
 </div>

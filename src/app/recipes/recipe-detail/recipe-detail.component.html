@@ -1,4 +1,5 @@
-<div style="outline: 1px solid hotpink;">recipe detail componnent
+<div style="outline: 1px solid hotpink;">
+    Recipe Detail Component :
 <div class="row">
     <div class="col-xs-12">
         <img [src]="recipe.imagePath" 
@@ -20,8 +21,8 @@
         </button>
         <ul class="dropdown-menu">
             <li > <a (click)="onAddToShoppingList()">To shopping List</a></li>
-            <li > <a href="#">Edit Recipe</a></li>
-            <li > <a href="#">Delete Recipe</a></li>
+            <li > <a (click)="onEditRecipe()">Edit Recipe</a></li>
+            <li > <a >Delete Recipe</a></li>
         </ul>
     </div>
 </div>
